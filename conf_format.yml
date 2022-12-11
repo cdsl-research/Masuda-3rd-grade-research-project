@@ -1,0 +1,8 @@
+#InfluxDBにクエリを送信するために必要な情報を送るためのフォーマット
+bucket: #bucket名 
+range:  #対象範囲
+namespace: #namespace名
+field: "cpu_usage_nanocores"
+url: 
+token:  
+org: 
