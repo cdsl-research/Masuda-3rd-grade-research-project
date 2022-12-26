@@ -7,7 +7,6 @@ def make_graph(file):
 
     plt.xlabel(input_csv.keys()[0])
     plt.ylabel(input_csv.keys()[1])
-    print(12)
 
     plt.plot(first_column_data, second_column_data, linestyle='solid', marker='o')
     plt.savefig("./static/images/graph.png")
