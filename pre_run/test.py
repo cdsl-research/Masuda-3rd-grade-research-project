@@ -6,6 +6,10 @@ from csv import reader
 from influxdb_client import InfluxDBClient
 import pandas
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import datetime
+
+
 
 
 def search():
@@ -48,7 +52,7 @@ def fetch_csv(x):
 
     csv_file.close()
 
-fetch_csv("data2")
+# fetch_csv("data2")
 
 def data(csv):
     name_rows = []
@@ -75,8 +79,12 @@ def data(csv):
                 date = row[5]
                 amout = row[6]
                 if date not in date_rows:
-                    date_rows.append(date)
-                    amount_rows[pod] = amount
+                    # d = date.replace("T", "-", )
+                    # dd = d.replace(":", "-")
+                    # ddd = dd.replace("Z", " ")
+                    print(type(datetime.datetime.fromisoformat(date)))
+                    # date_rows.append(date)
+                    # amount_rows[pod] = amount
 
             except:
                 pass
@@ -93,19 +101,25 @@ def data(csv):
         # del date_rows[0:4]
         # del amount_rows[0:4]
     
-    x = date_rows
-    y = amount_rows
+    # x = date_rows
+    # y = amount_rows
     
-    fig, ax = plt.subplots()
+    # fig, ax = plt.subplots()
     
-    ax.plot(x, y)
+    # ax.plot(x, y)
+    # plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%y/%m"))
+    # plt.gca().xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+    # plt.gcf().autofmt_xdate()
 
 
-    ax.set_title(name_rows[0])
-    ax.set_xlabel("Date")
-    ax.set_ylabel("CPU USAGE(vCPU)")
-    plt.show()
-    plt.savefig("cos.png")
     
-data("data.csv")
+
+    # print(123)
+    # ax.set_title(name_rows[0])
+    # ax.set_xlabel("Date")
+    # ax.set_ylabel("CPU USAGE(vCPU)")
+    # plt.show()
+    # plt.savefig("cos2.png")
+    
+data("data2.csv")
 
