@@ -97,29 +97,29 @@ def data(csv):
             except:
                 pass
                 
-        # del name_rows[0:4]
-        # del date_rows[0:4]
-        # del amount_rows[0:4]
+        del name_rows[0:4]
+        del date_rows[0:4]
+        del amount_rows[0:4]
     
-    # x = date_rows
-    # y = amount_rows
+    x = date_rows
+    y = amount_rows
     
-    # fig, ax = plt.subplots()
+    fig, ax = plt.subplots()
     
-    # ax.plot(x, y)
-    # plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%y/%m"))
-    # plt.gca().xaxis.set_major_locator(mdates.MonthLocator(interval=1))
-    # plt.gcf().autofmt_xdate()
+    ax.plot(x, y)
+    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%y/%m"))
+    plt.gca().xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+    plt.gcf().autofmt_xdate()
 
 
     
 
-    # print(123)
-    # ax.set_title(name_rows[0])
-    # ax.set_xlabel("Date")
-    # ax.set_ylabel("CPU USAGE(vCPU)")
-    # plt.show()
-    # plt.savefig("cos2.png")
+    print(123)
+    ax.set_title(name_rows[0])
+    ax.set_xlabel("Date")
+    ax.set_ylabel("CPU USAGE(vCPU)")
+    plt.show()
+    plt.savefig("cos2.png")
     
 data("data2.csv")
 
