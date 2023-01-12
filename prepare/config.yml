@@ -1,9 +1,9 @@
 #InfluxDBにクエリを送信するために必要な情報を送るためのフォーマット
-bucket: "sail-2"
-namespace: "boutique" #namespace名
+bucket: ""
+namespace: ""
 field: "cpu_usage_nanocores"
-url: "http://192.168.100.78:8086"
-token: "L2_mQ7X8S7GZozaJ_u96lYgFD0YOfWVdr_0hZo3s34Rzc-YWQX6F5h8Q27UGoOqg8qyF6QDrahlO19l7fimUpQ=="
-org: "master"
+url: ""
+token: 
+org: ""
 start: ""
 range: ""
