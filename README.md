@@ -1,1 +1,7 @@
-# Masuda-3rd-grade-research-project
+# PodごとのCPU使用量の分析Webアプリケーション
+
+## 手順
+1. preapareディレクトリ内のconf.ymlに以下の項目を記述する．
+1. app.pyを実行する．
+1. 指定のポート(デフォルトではport=8080)へアクセスする．
+1. 実行ボタンをクリックすると，Webページ上にグラフが出力される．
