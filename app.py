@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('exe.html')
+    return render_template('top.html')
 
 @app.route('/make_graph')
 def make_graph():
