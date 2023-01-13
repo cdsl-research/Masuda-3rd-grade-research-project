@@ -111,6 +111,7 @@ def data(csv):
         ax.set_xlabel("Date")
         ax.set_ylabel("CPU USAGE(vCPU)")
         plt.tight_layout()
+        plt.grid()
         plt.show()
         plt.savefig(f"./static/images/graph{i}.png")
     
