@@ -5,5 +5,3 @@ field: "cpu_usage_nanocores"
 url: ""
 token: 
 org: ""
-start: ""
-range: ""

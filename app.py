@@ -1,6 +1,6 @@
 from flask import Flask,render_template
-import graph
-from module import self_create
+import functions
+
 
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def index():
 
 @app.route('/make_graph')
 def make_graph():
-    graph.make_graph("/static/csv/data.csv")
+    functions.data("./static/csv/data2.csv")
     return render_template('show.html')
 
 if __name__ == "__main__":
